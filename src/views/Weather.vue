@@ -1,8 +1,8 @@
 <template>
   <div class="about">
     <v-toolbar dark flat>
-      <v-icon x-large class="ml-4 mb-3">mdi-newspaper-variant</v-icon>
-        <h2 class="text-md-h3 ml-4 mb-4" color="blue-grey darken-2">Latest Headlines</h2>
+      <v-icon x-large class="ml-4 mb-3">mdi-bitcoin</v-icon>
+        <h2 class="text-md-h3 ml-4 mb-4" color="blue-grey darken-2">Latest Crypto news</h2>
       </v-toolbar>
     <v-container>
       
@@ -18,12 +18,12 @@
         
           <v-card
             :color="item.color" :elevation="hover ? 16 : 2" :href="item.url" target="blank"
-            min-height="310"
+            min-height="210"
             class="ma-2"
           >
             <v-img
               class="white--text align-end"
-              height="320px"
+              height="200px"
               max-width="100vw"
               :src="item.urlToImage"
             >
@@ -90,7 +90,7 @@ export default {
   },
   mounted () {
     axios
-      .get('https://newsapi.org/v2/top-headlines?country=us&apiKey=8a5c505e545b4210a318e5adcf13b6bb')
+      .get('https://newsapi.org/v2/everything?q=crypto&language=en&sortBy=publishedAt&apiKey=8a5c505e545b4210a318e5adcf13b6bb')
       .then(response => (this.info = response.data))
   },
   filters: {
