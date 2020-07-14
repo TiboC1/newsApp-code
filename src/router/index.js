@@ -6,36 +6,40 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/home',
+    path: '/newsApp/home',
     name: 'Home',
     component: Home
   },
+  // {
+  //   path: '/',
+  //   redirect: '/home'
+  // },
   {
-    path: '/',
-    redirect: '/home'
+    path: '/newsApp',
+    redirect: '/newsApp/home'
   },
   {
-    path: '/about',
+    path: '/newsApp/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/financial',
+    path: '/newsApp/financial',
     name: 'Financial',
     component: () => import(/* webpackChunkName: "Financial" */ '../views/Financial.vue')
   },
   {
-    path: '/crypto',
+    path: '/newsApp/crypto',
     name: 'Crypto',
     component: () => import(/* webpackChunkName: "crypto" */ '../views/Crypto.vue')
   },
   {
-    path: '/sports',
+    path: '/newsApp/sports',
     name: 'Sports',
     component: () => import(/* webpackChunkName: "sports" */ '../views/Sports.vue')
   },
   {
-    path: '/weather',
+    path: '/newsApp/weather',
     name: 'Weather',
     component: () => import(/* webpackChunkName: "weather" */ '../views/Weather.vue')
   },
